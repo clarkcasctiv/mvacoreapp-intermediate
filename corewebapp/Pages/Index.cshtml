@@ -1,0 +1,17 @@
+﻿@page
+@inject Microsoft.Extensions.Configuration.IConfiguration Configuration
+@model IndexModel
+@{
+    ViewData["Title"] = "Home page";
+}
+
+<h1>
+    My Machine Name: @Configuration["computername"]
+</h1>
+<h1>
+    Twitter Secret Key: @Configuration["TwitterSecretKey"]
+</h1>
+
+<repeat count="5">
+    <p>Repeat Me!</p>
+</repeat>
